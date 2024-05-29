@@ -1,5 +1,5 @@
 # Yurt Yonetim-Sistemi/Dormitory Managment System
- BTBS404 - Mezuniyet Bitirme Projesi
+# **BTBS404 - Mezuniyet Bitirme Projesi**
 
 # BTBS404 - MEZUNİYET BİTİRME PROJEMİZE AİT BİLGİLER YER ALMAKTADIR.
 
