@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Başvuran Öğrenciler Listesi</title>
+    <link rel="stylesheet" href="basvuranogrenciler.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Yönetici Arayüzü</h2>
+        <a href="anasayfa.php">Anasayfa</a>
+        <a href="odatahsisi.php">Oda Tahsisi</a>
+        <a href="kayitliogrenci.php">Kayıtlı Öğrenciler</a>
+        <a href="basvuranogrenciler.php" class="active">Başvuran Öğrenciler</a>
+        <a href="yurtyonetimi.php">Yurtları Yönet</a>
+     
+    </div>
+
+    <!-- Ana İçerik -->
+    <div class="main-content">
+        <header>
+            <h1>Başvuran Öğrenciler Listesi</h1>
+            <div>
+                <label for="searchInput">Arama (Öğrenci Numarası veya İsim):</label>
+                <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Öğrenci ara...">
+            </div>
+        </header>
+        <main>
+            <table id="studentsTable">
+                <thead>
+                    <tr>
+                        <th>Öğrenci ID</th>
+                        <th>İsim</th>
+                        <th>Soyisim</th>
+                        <th>Cinsiyet</th>
+                        <th>Kimlik No</th>
+                        <th>Öğrenci No</th>
+                        <th>Adres</th>
+                        <th>Telefon</th>
+                        <th>Email</th>
+                        <th>Doğum Tarihi</th>
+                        <th>Yurt ID</th>
+                        <th>Oda ID</th>
+                        <th>Başvuru Oda ID</th> <!-- Yeni Sütun Başlığı -->
+                        <th>Öğrenci Resmi</th>
+                        <th>Başvuru Durumu</th>
+                        <th>Aksiyonlar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Veri satırları PHP tarafından doldurulacak -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <script>
+        function filterTable() {
+            var input, filter, table, tr, td, i, j, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("studentsTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 1; i < tr.length; i++) {
+                tr[i].style.display = "none";
+                td = tr[i].getElementsByTagName("td");
+                for (j = 0; j < td.length; j++) {
+                    if (td[j]) {
+                        txtValue = td[j].textContent || td[j].innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

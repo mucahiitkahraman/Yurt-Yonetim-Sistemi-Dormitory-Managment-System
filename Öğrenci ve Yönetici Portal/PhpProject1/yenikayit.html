@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yurt Yönetimi Kayıt</title>
+    <link rel="stylesheet" href="yenikayit.css">
+</head>
+<body>
+    <div class="register-container">
+        <h2>Yurt Yönetici Kayıt</h2>
+        <form action="yenikayit.php" method="post">
+            <input type="text" name="firstName" placeholder="İsim" required>
+            <input type="text" name="lastName" placeholder="Soyisim" required>
+            <input type="tel" name="phoneNumber" placeholder="Telefon Numarası" required>
+            <input type="text" name="position" placeholder="Pozisyon" required>
+            <input type="text" name="username" placeholder="Kullanıcı Adı" required>
+            <input type="password" name="password" placeholder="Şifre" required>
+            <button type="submit">Kayıt Ol</button>
+        </form>
+        <div class="login-link">
+            <a href="giris.html">Giriş Yap</a>
+        </div>
+    </div>
+</body>
+</html>

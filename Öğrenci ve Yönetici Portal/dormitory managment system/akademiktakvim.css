@@ -1,0 +1,74 @@
+/* Genel stil ayarları */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(to right, #e0e0e0, #f5f5f5);
+    display: flex;
+    flex-direction: column; /* Elemanları dikey olarak sırala */
+    align-items: flex-start; /* Elemanları sol kenara hizala */
+}
+
+.container {
+    display: flex;
+    width: calc(100% - 40px); /* Container genişliğini body paddinginden düş */
+    margin-top: 20px; /* Üstten boşluk */
+}
+
+.sidebar {
+    position: fixed; /* Sabit pozisyon kaldırıldı */
+    left: 20px;
+    width: 100%; /* Başlangıçta tam genişlik */
+    max-width: 250px; /* Sidebar maksimum genişliği */
+    flex: 0 0 250px; /* Sidebar için sabit genişlik */
+    height: auto;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px; /* Alt kısımda boşluk */
+    overflow-y: auto;
+    z-index: 2;
+}
+.content {
+    flex-grow: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-left: 20px; /* Sidebar ile arasında boşluk */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu a {
+    display: block;
+    color: #333;
+    padding: 10px;
+    margin: 5px 0;
+    text-decoration: none;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    transform: translateX(5px);
+    background-color: #e0e0e0;
+}
+
+/* Responsive düzen */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%; /* Mobil cihazlarda container genişliğini ayarla */
+    }
+
+    .sidebar {
+        width: 100%; /* Tam genişlik */
+        margin-bottom: 20px; /* İçerikle arasında boşluk */
+    }
+
+    .content {
+        width: 100%; /* Tam genişlik */
+        margin-left: 0; /* Sidebar ile arasındaki boşluğu kaldır */
+    }
+}

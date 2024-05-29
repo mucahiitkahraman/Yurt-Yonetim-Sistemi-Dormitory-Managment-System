@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yurt Promosyonları ve İndirimleri</title>
+    <link rel="stylesheet" href="yurtpromosyon.css">
+</head>
+<body>
+<div class="sidebar">
+    <h2>Yönetici Arayüzü</h2>
+    <a href="anasayfa.php">Anasayfa</a>
+    <a href="odatahsisi.php">Oda Tahsisi</a>
+    <a href="kayitliogrenci.php">Kayıtlı Öğrenciler</a>
+    <a href="basvuranogrenciler.php">Başvuran Öğrenciler</a>
+    <a href="yurtyonetimi.php">Yurtları Yönet</a>
+    <a href="yurtpromosyon.html">Yurt Promosyonları ve İndirimleri</a>
+</div>
+
+<div class="main-content">
+    <h1>Yurt Promosyonları ve İndirimleri</h1>
+    <button id="addPromoBtn">Promosyon Ekle</button>
+    <form id="addPromoForm" style="display: none;">
+        <label for="yurtId">Yurt ID:</label>
+        <input type="number" id="yurtId" name="yurtId" min="1"><br>
+        <label for="promoTitle">Promosyon Başlığı:</label>
+        <input type="text" id="promoTitle" name="promoTitle"><br>
+        <label for="promoDetails">Promosyon Detayları:</label>
+        <textarea id="promoDetails" name="promoDetails"></textarea><br>
+        <label for="validUntil">Geçerlilik Tarihi:</label>
+        <input type="date" id="validUntil" name="validUntil"><br>
+        <button type="button" onclick="addPromo()">Promosyon Ekle</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Yurt ID</th>
+                <th>Promosyon Başlığı</th>
+                <th>Promosyon Detayları</th>
+                <th>Geçerlilik Tarihi</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Burada promosyonlar listelenecek -->
+        </tbody>
+    </table>
+</div>
+
+<script>
+    var addPromoBtn = document.getElementById("addPromoBtn");
+    var addPromoForm = document.getElementById("addPromoForm");
+
+    addPromoBtn.onclick = function() {
+        addPromoForm.style.display = "block";
+    }
+
+    function addPromo() {
+        var table = document.querySelector(".main-content table tbody");
+        var newRow = table.insertRow(-1);
+        newRow.innerHTML = `
+            <td>${document.getElementById('yurtId').value}</td>
+            <td>${document.getElementById('promoTitle').value}</td>
+            <td>${document.getElementById('promoDetails').value}</td>
+            <td>${document.getElementById('validUntil').value}</td>
+            <td><button onclick="editPromo(this)">Düzenle</button></td>
+        `;
+        addPromoForm.reset();
+        addPromoForm.style.display = "none";
+    }
+
+    function editPromo(button) {
+        var row = button.parentNode.parentNode;
+        var cells = row.getElementsByTagName('td');
+        document.getElementById('yurtId').value = cells[0].innerText;
+        document.getElementById('promoTitle').value = cells[1].innerText;
+        document.getElementById('promoDetails').value = cells[2].innerText;
+        document.getElementById('validUntil').value = cells[3].innerText;
+        addPromoForm.style.display = "block";
+        addPromoBtn.style.display = "none"; // Ekleme butonunu gizle
+        if (!document.getElementById('updatePromoBtn')) {
+            var updatePromoBtn = document.createElement('button');
+            updatePromoBtn.innerText = 'Güncelle';
+            updatePromoBtn.id = 'updatePromoBtn';
+            updatePromoBtn.type = 'button';
+            updatePromoBtn.onclick = function() { updatePromo(row); };
+            addPromoForm.appendChild(updatePromoBtn);
+        }
+    }
+
+    function updatePromo(row) {
+        var cells = row.getElementsByTagName('td');
+        cells[0].innerText = document.getElementById('yurtId').value;
+        cells[1].innerText = document.getElementById('promoTitle').value;
+        cells[2].innerText = document.getElementById('promoDetails').value;
+        cells[3].innerText = document.getElementById('validUntil').value;
+        addPromoForm.reset();
+        addPromoForm.style.display = "none";
+        addPromoBtn.style.display = "block";
+        var updateButton = document.getElementById('updatePromoBtn');
+        addPromoForm.removeChild(updateButton);
+    }
+</script>
+
+</body>
+</html>

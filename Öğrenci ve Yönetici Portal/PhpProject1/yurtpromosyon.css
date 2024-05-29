@@ -1,0 +1,183 @@
+
+
+.sidebar {
+   
+    box-sizing: border-box;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+
+
+
+
+
+
+/* Temel düzenlemeler */
+body {
+    display: flex;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Yönetici Arayüzü (Sidebar) */
+.sidebar {
+    position: fixed; /* Sabit pozisyon */
+    left: 0;
+    top: 0;
+    width: 200px; /* Genişlik artırıldı */
+    height: 100vh; /* Tam ekran yüksekliği */
+    background-color: #2c3e50; /* Koyu mavi arka plan */
+    color: #ecf0f1; /* Açık renkli metin */
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Dikey hizalama */
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    color: #ecf0f1; /* Başlık rengi */
+}
+
+.sidebar a {
+    display: block;
+    color: #ecf0f1; /* Metin rengi */
+    text-decoration: none;
+    padding: 12px 15px; /* İç boşluk */
+    margin-bottom: 10px;
+    background-color: #34495e; /* Orta koyu arka plan */
+    border-radius: 5px; /* Köşeleri yuvarlatma */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #1abc9c; /* Üzerine gelindiğinde değişen arka plan */
+    color: #2c3e50; /* Üzerine gelindiğinde değişen metin rengi */
+}
+
+.sidebar a.active {
+    background-color: #e74c3c; /* Aktif bağlantı rengi */
+    color: #fff; /* Aktif bağlantı metin rengi */
+}
+
+/* Ana İçerik Bölümü */
+.main-content {
+    margin-left: 250px; /* Sidebar genişliği kadar boşluk */
+    padding: 20px;
+    box-sizing: border-box;
+    width: calc(100% - 250px); /* Ekran genişliğinden sidebar genişliğini çıkar */
+    overflow-y: auto; /* Gerekirse dikey kaydırma */
+}
+
+.main-content h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Tablo Stilleri */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Tablo Stilleri */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Form elemanları */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+input[type="button"] {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+input[type="button"]:hover {
+    background-color: #2980b9;
+}
+
+button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+

@@ -1,0 +1,104 @@
+
+.kart-container {
+    margin-left: 150px;
+}
+.kart-container3 {
+    gap: 5px;
+    width: 1560px;
+    height: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; 
+    margin-left: 160px; 
+    margin-right: 20px; 
+    padding: 10px 0; 
+    box-sizing: border-box;
+}
+
+
+.kart-container3 .kart{
+    background-color: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 10px; 
+    margin: 10px 0; 
+    max-width: 250px; 
+    box-sizing: border-box; 
+}
+
+.kart3 {
+    background-color: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 10px; 
+    margin: 10px 0; 
+    max-width: 300px; 
+    box-sizing: border-box; 
+}
+
+.kart {
+    padding: 10px; 
+    margin: 10px 0; 
+    width: calc(20% - 20px);
+    margin: 5px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+
+.buton {
+    margin-top: auto; 
+}
+
+
+
+.kart a {
+    margin-top: auto; 
+    padding: 10px; 
+    margin: 20px 0; 
+}
+
+.kart img:hover {
+    transform: scale(1.5); 
+}
+
+.kart img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 4px 4px 0 0; 
+    margin-bottom: 10px; 
+    transition: transform 0.2s;
+    width: 500px; 
+}
+
+.kart h2 {
+    font-size: 20px; 
+    margin-bottom: 10px; 
+}
+.kart button {
+    margin-bottom: 15px;
+}
+
+.kart p {
+    font-size: 15px; 
+    margin-bottom: 0px; 
+  
+    display: inline-block; 
+}
+
+
+.kart a {
+    display: block; 
+    text-align: center; 
+    padding: 10px 0; 
+    background-color: #007bff; 
+    color: #fff; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
+}
+
+.kart a:hover {
+    background-color: #0056b3; 
+}

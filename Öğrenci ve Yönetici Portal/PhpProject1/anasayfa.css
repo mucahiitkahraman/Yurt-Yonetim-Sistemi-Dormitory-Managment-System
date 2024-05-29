@@ -1,0 +1,124 @@
+/* Temel Resetleme ve Font Ayarları */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Yönetici Arayüzü (Sidebar) */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Sidebar içeriği fazla olursa kaydırma */
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    color: #ecf0f1;
+}
+
+.sidebar a {
+    display: block;
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background-color: #34495e;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #1abc9c;
+    color: #2c3e50;
+}
+
+.sidebar a.active {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+/* Butonlar tıklanamaz hale geldiğinde */
+.sidebar a.disabled {
+    pointer-events: none;
+    background-color: #7f8c8d;
+    color: #bdc3c7;
+}
+
+/* Ana İçerik */
+.main-content {
+    margin-left: 200px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    min-height: 100vh;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Buton Stilleri */
+.button-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.redirect-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.redirect-button:hover {
+    background-color: #45a049;
+}
+
+/* Çıkış butonuna özel stil */
+.btn-logout {
+    background-color: red !important;
+    color: white !important;
+}
+
+/* Tablo Stilleri */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #34495e;
+    color: #ecf0f1;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}

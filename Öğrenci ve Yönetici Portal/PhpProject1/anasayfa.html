@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yurt Yönetim Paneli</title>
+    <link rel="stylesheet" href="anasayfa.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <h2>Yönetici Arayüzü</h2>
+        <a href="anasayfa.php" class="sidebar-link active">Anasayfa</a>
+        <a href="odatahsisi.php" class="sidebar-link">Oda Tahsisi</a>
+        <a href="kayitliogrenci.php" class="sidebar-link">Kayıtlı Öğrenciler</a>
+        <a href="basvuranogrenciler.php" class="sidebar-link">Başvuran Öğrenciler</a>
+        <a href="yurtyonetimi.php" class="sidebar-link">Yurtları Yönet</a>
+        
+    </nav>
+
+    <!-- Ana İçerik Bölümü -->
+    <div class="main-content">
+        <h1>Hoş Geldin, Yönetici!</h1>
+    </div>
+
+    <!-- Butonlar -->
+    <div class="button-container">
+        <button class="redirect-button" onclick="window.location.href='yenikayit.html'">Kayıt</button>
+        <button id="login-button" class="redirect-button" onclick="window.location.href='giris.html'">Giriş</button>
+    </div>
+</body>
+</html>

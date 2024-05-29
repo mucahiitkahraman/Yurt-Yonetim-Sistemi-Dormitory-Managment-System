@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yurt Yönetimi</title>
+    <link rel="stylesheet" href="yurtyonetimi.css">
+    <script src="odaekle.js" defer></script> <!-- Yeni JS dosyası eklendi -->
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Yönetici Arayüzü</h2>
+        <a href="anasayfa.php">Anasayfa</a>
+        <a href="odatahsisi.php">Oda Tahsisi</a>
+        <a href="kayitliogrenci.php">Kayıtlı Öğrenciler</a>
+        <a href="basvuranogrenciler.php">Başvuran Öğrenciler</a>
+        <a href="yurtyonetimi.php" class="active">Yurtları Yönet</a>
+        
+    </div>
+
+    <!-- Ana İçerik -->
+    <div class="main-content">
+        <h1>Yurt Yönetimi</h1>
+        <button id="addDormitoryBtn" class="button">Yurt Ekle</button>
+        <button id="addRoomBtn" class="button">Oda Ekle</button> <!-- Yeni buton burada eklendi -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Yurt ID</th>
+                    <th>Yurt Adı</th>
+                    <th>Adres</th>
+                    <th>Yurt Kapasitesi</th>
+                    <th>Oda Tipi</th>
+                    <th>Telefon</th>
+                    <th>Oda Sayısı</th>
+                    <th>Fiyatlar</th>
+                    <th>Geçmiş Fiyatlar</th>
+                    <th>Yurt Resmi</th>
+                    <th>Konum</th>
+                    <th>Hizmet</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Veri satırları PHP tarafından doldurulacak -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <!-- Yurt Ekleme Formu Modal -->
+    <div id="addDormitoryModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Yeni Yurt Ekle</h2>
+            <form id="addDormitoryForm" action="yurtekle.php" method="post" enctype="multipart/form-data">
+                <!-- Form alanları -->
+                <label for="yurtAdi">Yurt Adı:</label>
+                <input type="text" id="yurtAdi" name="yurtAdi" required>
+                <label for="adres">Adres:</label>
+                <input type="text" id="adres" name="adres" required>
+                <label for="yurtKapasitesi">Yurt Kapasitesi:</label>
+                <input type="number" id="yurtKapasitesi" name="yurtKapasitesi" required>
+                <label for="odaTipi">Oda Tipi:</label>
+                <input type="text" id="odaTipi" name="odaTipi" required>
+                <label for="telefon">Telefon:</label>
+                <input type="tel" id="telefon" name="telefon" required>
+                <label for="odaSayisi">Oda Sayısı:</label>
+                <input type="number" id="odaSayisi" name="odaSayisi" required>
+                <label for="fiyatlar">Fiyatlar:</label>
+                <input type="text" id="fiyatlar" name="fiyatlar" required>
+                <label for="gecmisFiyatlar">Geçmiş Fiyatlar:</label>
+                <input type="text" id="gecmisFiyatlar" name="gecmisFiyatlar" required>
+                <label for="yurtresmi">Yurt Resmi:</label>
+                <input type="file" id="yurtresmi" name="yurtresmi" accept="image/*" required>
+                <label for="konum">Konum:</label>
+                <input type="text" id="konum" name="konum" required>
+                <label for="hizmet">Hizmet:</label>
+                <input type="text" id="hizmet" name="hizmet" required>
+                <button type="submit">Ekle</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Oda Ekleme Formu Modal -->
+    <div id="addRoomModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Yeni Oda Ekle</h2>
+            <form id="addRoomForm" action="odaekle.php" method="post" enctype="multipart/form-data">
+                <label for="yurt_ID">Yurt ID:</label>
+                <input type="number" id="yurt_ID" name="yurt_ID" required>
+                
+                <label for="odaNumarası">Oda Numarası:</label>
+                <input type="number" id="odaNumarası" name="odaNumarası" required>
+
+                
+                <label for="odaKapasitesi">Oda Kapasitesi:</label>
+                <input type="number" id="odaKapasitesi" name="odaKapasitesi" required>
+                
+                <label for="odaTipi">Oda Tipi:</label>
+                <input type="text" id="odaTipi" name="odaTipi" required>
+                
+                <label for="doluluk">Doluluk:</label>
+                <input type="number" id="doluluk" name="doluluk" required>
+                
+                <label for="oda_Bilgisi">Oda Bilgisi:</label>
+                <textarea id="oda_Bilgisi" name="oda_Bilgisi" required></textarea>
+                
+                <label for="oda_resmi">Oda Resmi:</label>
+                <input type="file" id="oda_resmi" name="oda_resmi" accept="image/*" required>
+                
+                <label for="fiyat">Fiyat:</label>
+                <input type="number" id="fiyat" name="fiyat" required>
+                
+                <button type="submit">Ekle</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="yurtyonetimi.js"></script>
+</body>
+</html>
