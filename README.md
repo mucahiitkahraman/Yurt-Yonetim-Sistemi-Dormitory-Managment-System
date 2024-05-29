@@ -6,10 +6,10 @@
 # **Öğrenci ve Yönetici Portalı**
 Bu proje, öğrenci ve yurt yöneticileri için iki ayrı arayüz sunan bir yurt yönetim sistemidir. Proje iki ana klasörden oluşmaktadır:
 
-# **PhpProject1**
+# **PhpProject1** (Ali Yavuz - Hasan)
 PhpProject1 klasörü, yurt yöneticisi arayüzünü içeren projeyi barındırır. Bu klasördeki dosyalar yurt yöneticilerinin yurt bilgilerini yönetmesini, öğrencilerin oda tahsisleri ve oda ekleme gibi diğer yönetimsel işlemleri gerçekleştirmesini sağlar.
 
-# **dormitory managment system**
+# **dormitory managment system** (Mücahit - Murat)
 dormitory managment system klasörü, öğrenci arayüzünü içeren projeyi barındırır. Bu klasördeki dosyalar PHP, HTML, CSS ve MySQL kullanılarak yazılmıştır ve öğrencilerin yurt aramalarını, başvurularını, yurt değerlendirme yapabilmelerini, yurt yorumlarını okuyabilmeleri, kendi kişisel bilgilerini görüntüleyebilme ve resimlerini güncelleyebilmelerini, aynı oda içerisinde olan öğrencilerin chat ile iletişim kurabilmelerini ve yurt bilgilerini vb. gibi özellikleri görüntülemelerini sağlar.
 Ek olarak ise dormitory managment system içerisinde bulunan resimler klasörü ise yurt odasına ait eklenen resim bilgilerini saklandığı klasördür.
 
