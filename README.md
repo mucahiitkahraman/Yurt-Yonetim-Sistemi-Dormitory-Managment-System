@@ -15,7 +15,11 @@ Ek olarak ise dormitory managment system içerisinde bulunan resimler klasörü 
 
 # **Klasördeki Dosyalar:**
 gecis.php: Giriş ve yönlendirme işlemlerini gerçekleştiren PHP dosyası.
+
 .gitattributes: Git özelliklerini tanımlayan dosya.
+
 README.md: Proje hakkında genel bilgilerin yer aldığı dosya.
+
 dormitory_managment_system.sql: Veritabanı yapılandırma dosyası (ana dosya).
+
 dormitory_managment_system_yedek: (yedek veritabanı dosyası)
