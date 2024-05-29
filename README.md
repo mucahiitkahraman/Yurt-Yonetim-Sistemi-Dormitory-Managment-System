@@ -11,6 +11,7 @@ PhpProject1 klasörü, yurt yöneticisi arayüzünü içeren projeyi barındır�
 
 dormitory managment system
 dormitory managment system klasörü, öğrenci arayüzünü içeren projeyi barındırır. Bu klasördeki dosyalar PHP, HTML, CSS ve MySQL kullanılarak yazılmıştır ve öğrencilerin yurt aramalarını, başvurularını, yurt değerlendirme yapabilmelerini, yurt yorumlarını okuyabilmeleri, kendi kişisel bilgilerini görüntüleyebilme ve resimlerini güncelleyebilmelerini, aynı oda içerisinde olan öğrencilerin chat ile iletişim kurabilmelerini ve yurt bilgilerini vb. gibi özellikleri görüntülemelerini sağlar.
+Ek olarak ise dormitory managment system içerisinde bulunan resimler klasörü ise yurt odasına ait eklenen resim bilgilerini saklandığı klasördür.
 
 Klasördeki Dosyalar:
 gecis.php: Giriş ve yönlendirme işlemlerini gerçekleştiren PHP dosyası.
